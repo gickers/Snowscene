@@ -2,8 +2,6 @@
 //It must be loaded from index.html
 //It assumes that the file "myPalettes.js" has also been loaded
 
-let x,y
-
 function setup() {
 	createCanvas(windowWidth/2, windowHeight/2);
     background(0, 0, 255);
@@ -14,6 +12,8 @@ function draw() {
 	rect(0,150,3000,500);
     drawSnowman(150,650,0.2);
     drawSnowman(450,850,0.8)
+
+
 }
 function drawSnowman(x,y,size){
     //stomach

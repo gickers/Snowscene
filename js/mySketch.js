@@ -21,7 +21,12 @@ function draw() {
     textSize(200)
     textAlign(CENTER,CENTER);
     text("Merry Christmas",1800,1200);
-
+    fill(255,255,255,random(100));
+	noStroke()
+	x = random(3500);
+	y = random(1800);
+	circle(x,y,50)
+    if (frameCount>300){noLoop()}
 }
 function drawSnowman(x,y,size){
     //stomach

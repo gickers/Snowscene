@@ -16,7 +16,11 @@ function draw() {
     tree(1900, 900);
     tree(1700,950)
     tree(2100,925)
-
+    drawMoon(3500,150);
+    fill(255,0,0)
+    textSize(200)
+    textAlign(CENTER,CENTER);
+    text("Merry Christmas",1800,1200);
 
 }
 function drawSnowman(x,y,size){
@@ -42,8 +46,8 @@ function drawSnowman(x,y,size){
     circle(x + 10, y - 110, 15);
     
     //scarf
-    fill(255, 0, 0)
-    rect(x - 95, y - 95, 200, 15, 50, 50);
+    //fill(255, 0, 0)
+    //rect(x - 95, y - 95, 200, 15, 50, 50);
     }
     
     function tree(treeX, treeY) {
@@ -58,4 +62,8 @@ function drawSnowman(x,y,size){
           triangle(treeX - 100, treeY, treeX + 100, treeY, treeX, treeY - 150);
           treeY -= 75;
         }
+    }
+    function drawMoon(x,y){
+        fill(180)
+        circle(x,y,150)
     }

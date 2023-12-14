@@ -3,15 +3,17 @@
 //It assumes that the file "myPalettes.js" has also been loaded
 
 function setup() {
-	createCanvas(windowWidth/2, windowHeight/2);
+	createCanvas(windowWidth, windowHeight);
     background(0, 0, 255);
 }
 function draw() {
 		//ground
 	fill(255, 255, 255);
-	rect(0,150,3000,500);
+	rect(0,150,width,height);
     drawSnowman(150,650,0.2);
-    drawSnowman(450,850,0.8)
+    drawSnowman(450,850,0.8);
+    tree(400, 400);
+}
 
 
 }
@@ -40,4 +42,17 @@ function drawSnowman(x,y,size){
     //scarf
     fill(255, 0, 0)
     rect(x - 95, y - 95, 200, 15, 50, 50);
+    }
+    function tree(treeX, treeY) {
+        noStroke();
+        // trunk
+        rectMode(CENTER);
+        fill("rgb(166,78,78)");
+        rect(treeX, treeY, 10, 40);
+      //   leaves
+        fill("green");
+        for (let triangleCounter = 0; triangleCounter < 3; triangleCounter++) {
+          triangle(treeX - 20, treeY, treeX + 20, treeY, treeX, treeY - 30);
+          treeY -= 15;
+        }
     }

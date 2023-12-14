@@ -14,6 +14,8 @@ function draw() {
     drawSnowman(150,650,0.2);
     drawSnowman(450,850,0.8)
     tree(1900, 900);
+    tree(1700,950)
+    tree(2100,925)
 
 
 }

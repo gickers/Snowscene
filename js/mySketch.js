@@ -9,7 +9,7 @@ function setup() {
   //ground
   fill(255, 255, 255);
   rect(0, 150, 3000, 500);
-  image(img, 550, 120, 50, 50);
+  image(img, 550, 120, 150, 150);
 }
 function draw() {
   drawSnowman(150, 650, 0.2);
@@ -35,8 +35,8 @@ function draw() {
   }
   rectMode(CENTER);
   fill("brown");
-  rect(2750, 950, 500, 20);
-  for (xPosition = 2500; xPosition <= 3000; xPosition += 50) {
+  rect(3250, 1450, 500, 20);
+  for (xPosition = 3000; xPosition <= 3500; xPosition += 50) {
     drawFence(xPosition);
   }
 }
@@ -99,7 +99,7 @@ function cloud(x, y) {
 function drawFence(x) {
   fill("brown");
   rectMode(CENTER);
-  rect(x, 950, 25, 100);
+  rect(x, 1450, 25, 100);
 }
 function preload() {
   img = loadImage("images/LogCabin.png");

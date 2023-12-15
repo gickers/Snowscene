@@ -1,13 +1,15 @@
 //This is our main javascript file constituting our p5.js sketch.
 //It must be loaded from index.html
 //It assumes that the file "myPalettes.js" has also been loaded
-
+let x, y;
+let img;
 function setup() {
   createCanvas(windowWidth / 2, windowHeight / 2);
   background(0, 0, 255);
   //ground
   fill(255, 255, 255);
   rect(0, 150, 3000, 500);
+  image(img, 550, 120, 50, 50);
 }
 function draw() {
   drawSnowman(150, 650, 0.2);
@@ -98,4 +100,7 @@ function drawFence(x) {
   fill("brown");
   rectMode(CENTER);
   rect(x, 950, 25, 100);
+}
+function preload() {
+  img = loadImage("images/LogCabin.png");
 }

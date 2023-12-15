@@ -10,6 +10,7 @@ function setup() {
   fill(255, 255, 255);
   rect(0, 150, 3000, 500);
   image(img, 550, 120, 150, 150);
+  image(giftImg, 230,-20,300,300);
 }
 function draw() {
   drawSnowman(150, 650, 0.2);
@@ -103,4 +104,5 @@ function drawFence(x) {
 }
 function preload() {
   img = loadImage("images/LogCabin.png");
+  giftImg = loadImage("images/gift.png");
 }

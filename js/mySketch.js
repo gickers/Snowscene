@@ -28,8 +28,14 @@ function draw() {
   x = random(3500);
   y = random(1800);
   circle(x, y, 50);
-  if (frameCount > 300) {
+  if (frameCount > 500) {
     noLoop();
+  }
+  rectMode(CENTER);
+  fill("brown");
+  rect(2750, 950, 500, 20);
+  for (xPosition = 2500; xPosition <= 3000; xPosition += 50) {
+    drawFence(xPosition);
   }
 }
 function drawSnowman(x, y, size) {
@@ -87,4 +93,9 @@ function cloud(x, y) {
     d += 40;
     h += 10;
   }
+}
+function drawFence(x) {
+  fill("brown");
+  rectMode(CENTER);
+  rect(x, 950, 25, 100);
 }

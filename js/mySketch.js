@@ -10,23 +10,27 @@ function setup() {
   rect(0, 150, 3000, 500);
 }
 function draw() {
-		
-    drawSnowman(150,650,0.2);
-    drawSnowman(450,850,0.8)
-    tree(1900, 900);
-    tree(1700,950)
-    tree(2100,925)
-    drawMoon(3500,150);
-    fill(255,0,0)
-    textSize(200)
-    textAlign(CENTER,CENTER);
-    text("Merry Christmas",1800,1200);
-    fill(255,255,255,random(100));
-	noStroke()
-	x = random(3500);
-	y = random(1800);
-	circle(x,y,50)
-    if (frameCount>300){noLoop()}
+  drawSnowman(150, 650, 0.2);
+  drawSnowman(450, 850, 0.8);
+  tree(1900, 900);
+  tree(1700, 950);
+  tree(2100, 925);
+  drawMoon(3500, 150);
+  cloud(300, 90);
+  cloud(1300, 190);
+  cloud(2400, 150);
+  fill(255, 0, 0);
+  textSize(200);
+  textAlign(CENTER, CENTER);
+  text("Merry Christmas", 1800, 1200);
+  fill(255, 255, 255, random(100));
+  noStroke();
+  x = random(3500);
+  y = random(1800);
+  circle(x, y, 50);
+  if (frameCount > 300) {
+    noLoop();
+  }
 }
 function drawSnowman(x, y, size) {
   //stomach
@@ -74,12 +78,13 @@ function drawMoon(x, y) {
 }
 function cloud(x, y) {
   fill(200, 200, 200, 100);
-  let d = 300, h = 60
+  let d = 300,
+    h = 60;
   for (counter = 0; counter < 3; counter++) {
     ellipse(x, y, d, h);
     x += 100;
-    y += 10
-    d += 40
-    h += 10
+    y += 10;
+    d += 40;
+    h += 10;
   }
 }
